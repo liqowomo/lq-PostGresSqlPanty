@@ -1,23 +1,31 @@
 /**
  * Tut test here - https://supabase.com/docs/reference/javascript/select
- *
  */
 
-// 1 .Creating the client
-
+// Setting up k and u
+import {SBurl} from './config'
+import {SBkey} from './config'
 import {createClient} from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://urlqwzlpqnxiduxiwdse.supabase.co'
-const publicAnonKey =
-	'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVybHF3emxwcW54aWR1eGl3ZHNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwNTAyNzAsImV4cCI6MjAxNzYyNjI3MH0.EADDxPgefEY3zArH4glsswKHzgOpnPyirs1n16FCkOk'
+// 1 .Creating the client
+const supabase = createClient(SBurl, SBkey)
 
-// Create a single supabase client for interacting with your database
-const supabase = createClient(supabaseUrl, publicAnonKey)
-console.log(supabase)
+//2. Write function to fetch data
 
-// Create pussy 
+async function getData() {
+	const {data, error} = await supabase.from('countries').select()
 
+	console.log(`
 
-// Now fetch data from none existing source
-const {data, error} = await supabase.from('countries').select()
-console.log(data, error)
+======================
+Query results are here
+=======================
+
+`)
+	console.log(data, error)
+}
+
+// Calling all the functions
+
+// Fetch data
+getData()
