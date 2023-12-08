@@ -2,4 +2,3 @@ s
 c tt o ffgggg fg gggg
 
 
-mongodb+srv://mx0mx:fbTPYMJ2O7JOtrTy@cluster0learning.p6hjos9.mongodb.net/
