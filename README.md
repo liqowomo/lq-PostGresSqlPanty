@@ -16,6 +16,7 @@ https://github.com/liqowomo/lq-PostGresSqlPanty/assets/123171512/f131eb67-df48-4
 
 # W ?
 1. This one is all the work for learning postgresssql basically , will put that info here even though most of the actual work is being done online 
+2. Also trying to figure out how to programatically try to read and write to DB using python or node. Spent lot of time trying to figure this out
 
 
 
