@@ -15,6 +15,9 @@ const publicAnonKey =
 const supabase = createClient(supabaseUrl, publicAnonKey)
 console.log(supabase)
 
+// Create pussy 
+
+
 // Now fetch data from none existing source
 const {data, error} = await supabase.from('countries').select()
 console.log(data, error)
