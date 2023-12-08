@@ -1,0 +1,182 @@
+Doing some testing to see what the output looks like with the following command
+> db.Dancers.find().pretty()
+
+=== Results ===
+[
+  {
+    "_id": {
+      "$oid": "656f0df9ff2d8d6c4ededa41"
+    },
+    "name": "Joan",
+    "BootySize": "XXL",
+    "Fluffiness": "Creamy",
+    "Stinkiness": "Mild"
+  },
+  {
+    "_id": {
+      "$oid": "656f1696e28e8aa144d6eba4"
+    },
+    "name": "Ann",
+    "BootySize": "XL",
+    "Fluffiness": "Rubbery",
+    "Stinkiness": "Low"
+  },
+  {
+    "_id": {
+      "$oid": "656f1738e28e8aa144d6eba5"
+    },
+    "name": "Honi",
+    "BootySize": "L",
+    "Fluffiness": "Firm",
+    "Stinkiness": "Medim",
+    "Dom": "Yes"
+  },
+  {
+    "_id": {
+      "$oid": "656f1d44e28e8aa144d6eba6"
+    },
+    "name": "Shany",
+    "BootySize": "Small",
+    "Dom": "forced"
+  },
+  {
+    "_id": {
+      "$oid": "656f1d44e28e8aa144d6eba8"
+    },
+    "name": "Choc"
+  },
+  {
+    "_id": {
+      "$oid": "656f3062e28e8aa144d6ebae"
+    },
+    "name": "mikuni",
+    "age": 22
+  },
+  {
+    "_id": {
+      "$oid": "6570bc93bb7a2ac1a2dd9ae6"
+    },
+    "name": "Rono",
+    "BootySize": "Giant"
+  },
+  {
+    "_id": {
+      "$oid": "6570bc93bb7a2ac1a2dd9ae7"
+    },
+    "name": "Jams",
+    "BootySize": "Notty"
+  },
+  {
+    "_id": {
+      "$oid": "6570bcaa157f103aba66317c"
+    },
+    "name": "Rono",
+    "BootySize": "DumpTruck"
+  },
+  {
+    "_id": {
+      "$oid": "6570bcaa157f103aba66317d"
+    },
+    "name": "Jams",
+    "BootySize": "Notty"
+  },
+  {
+    "_id": {
+      "$oid": "6570bfb0a8c2800b55a02385"
+    },
+    "name": "Jaroono",
+    "BootySize": "DumpTruck"
+  }
+]
+
+-----------------------------------
+
+Now to see the raw output without the pretty()
+
+db.Dancers.find()
+[
+  {
+    "_id": {
+      "$oid": "656f0df9ff2d8d6c4ededa41"
+    },
+    "name": "Joan",
+    "BootySize": "XXL",
+    "Fluffiness": "Creamy",
+    "Stinkiness": "Mild"
+  },
+  {
+    "_id": {
+      "$oid": "656f1696e28e8aa144d6eba4"
+    },
+    "name": "Ann",
+    "BootySize": "XL",
+    "Fluffiness": "Rubbery",
+    "Stinkiness": "Low"
+  },
+  {
+    "_id": {
+      "$oid": "656f1738e28e8aa144d6eba5"
+    },
+    "name": "Honi",
+    "BootySize": "L",
+    "Fluffiness": "Firm",
+    "Stinkiness": "Medim",
+    "Dom": "Yes"
+  },
+  {
+    "_id": {
+      "$oid": "656f1d44e28e8aa144d6eba6"
+    },
+    "name": "Shany",
+    "BootySize": "Small",
+    "Dom": "forced"
+  },
+  {
+    "_id": {
+      "$oid": "656f1d44e28e8aa144d6eba8"
+    },
+    "name": "Choc"
+  },
+  {
+    "_id": {
+      "$oid": "656f3062e28e8aa144d6ebae"
+    },
+    "name": "mikuni",
+    "age": 22
+  },
+  {
+    "_id": {
+      "$oid": "6570bc93bb7a2ac1a2dd9ae6"
+    },
+    "name": "Rono",
+    "BootySize": "Giant"
+  },
+  {
+    "_id": {
+      "$oid": "6570bc93bb7a2ac1a2dd9ae7"
+    },
+    "name": "Jams",
+    "BootySize": "Notty"
+  },
+  {
+    "_id": {
+      "$oid": "6570bcaa157f103aba66317c"
+    },
+    "name": "Rono",
+    "BootySize": "DumpTruck"
+  },
+  {
+    "_id": {
+      "$oid": "6570bcaa157f103aba66317d"
+    },
+    "name": "Jams",
+    "BootySize": "Notty"
+  },
+  {
+    "_id": {
+      "$oid": "6570bfb0a8c2800b55a02385"
+    },
+    "name": "Jaroono",
+    "BootySize": "DumpTruck"
+  }
+]
