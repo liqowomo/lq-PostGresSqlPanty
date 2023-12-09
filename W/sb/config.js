@@ -1,5 +1,5 @@
 /**
- * Config is for fingerfucking
+ * Main config which will be used in all testing which will be done here
  */
 
 // K and url
