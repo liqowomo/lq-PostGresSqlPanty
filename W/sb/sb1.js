@@ -11,9 +11,9 @@ import {createClient} from '@supabase/supabase-js'
 const supabase = createClient(SBurl, SBkey)
 
 /**
- * Write the function for fetching data , note 
- * we are using the async function to prevent blocking of other 
- * functions. Seems to be best practice 
+ * Write the function for fetching data , note
+ * we are using the async function to prevent blocking of other
+ * functions. Seems to be best practice
  */
 //2. Write function to fetch data
 
