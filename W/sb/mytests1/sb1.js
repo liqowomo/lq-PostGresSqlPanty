@@ -1,32 +1,50 @@
 /**
- * Tut test here - https://supabase.com/docs/reference/javascript/select
- * Test 1
+ * Testing fucntions from  docs
+ * https://supabase.com/docs/reference/javascript/select
  */
-
-// Setting up k and u
-import {SBurl} from './config'
-import {SBkey} from './config'
+// Setting up the libraries
 import {createClient} from '@supabase/supabase-js'
+import {SBkey} from './config'
+import {SBurl} from './config'
+const fs = require('fs') // Required for writing to file
 
-// 1 .Creating the client
+// Creating cliesn
 const supabase = createClient(SBurl, SBkey)
 
-/**
- * Write the function for fetching data , note
- * we are using the async function to prevent blocking of other
- * functions. Seems to be best practice
- */
-//2. Write function to fetch data
+// Writing to file function 
+async function writeToFile(dataWrite) {
+	try {
+		await fs.promises.writeFile('output.json', dataWrite)
+		console.log('Data written to file successfully')
+	} catch (error) {
+		console.error('Error writing to file:', error)
+	}
+}
 
+//  Fetching data functions
 async function getData() {
 	const {data, error} = await supabase.from('countries').select()
 	if (error) {
-		console.log(`Data Fetching error`, error)
+		console.log('Error fetching data:', error)
+	} else {
+		const dataWrite = JSON.stringify(data) // Stringify the data
+		writeToFile(dataWrite) // Writing function being called here
+		console.log('Data:', data)
 	}
-	console.log(data)
 }
 
-// C
+// Inserting data function
+async function insertData() {
+	const {data, error} = await supabase
+		.from('countries')
+		.insert({id: 5, name: 'Bona'})
+	if (error) {
+		console.log('Error fetching data:', error)
+	} else {
+		console.log('Data:', data)
+	}
+}
 
-// Fetch data
-getData()
+// Run Function
+// getData()
+insertData()
