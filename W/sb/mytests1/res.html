@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Page</title>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
 		/>
-		<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-		<title>Hello, world!</title>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.21.2"></script>
 	</head>
 	<body>
 		<style>
@@ -18,9 +18,28 @@
 		</style>
 		<main class="container">
 			<h1>Hello, world!</h1>
+			<h2>Testing out sb1.js data pull</h2>
+			<div id="result"></div>
 		</main>
-		<div name="Scriptrun">
-			<script src="sb1.js"></script>
-		</div>
+		<script>
+			const supabase = supabase.createClient(supabaseUrl, supabaseKey)
+		</script>
+		<script>
+			const supabaseUrl = 'https://your-supabase-url.com'
+			const supabaseKey = 'your-supabase-api-key'
+
+			// Call getData function after the page loads
+			window.onload = getData
+
+			async function getData() {
+				try {
+					const {data, error} = await supabase.from('countries').select()
+					const resultElement = document.getElementById('result')
+					resultElement.innerHTML = JSON.stringify(data)
+				} catch (error) {
+					console.log(error)
+				}
+			}
+		</script>
 	</body>
 </html>

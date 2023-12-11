@@ -21,5 +21,20 @@ async function getData() {
 		console.log(error)
 	}
 }
+
+// Get version of the databse
+async function getPostgresVersion() {
+	const {data, error} = await supabase.rpc('get_postgres_version')
+
+	if (error) {
+		console.error('Error fetching PostgreSQL version:', error)
+		return
+	}
+
+	const postgresVersion = data[0].get_postgres_version
+	console.log('PostgreSQL version:', postgresVersion)
+}
+
 // Execute command
 getData()
+// getPostgresVersion()
