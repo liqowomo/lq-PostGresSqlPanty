@@ -1,44 +1,54 @@
+// Taken from claude
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My Page</title>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
 		/>
+
+		<title>My Page</title>
+
 		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.21.2"></script>
 	</head>
+
 	<body>
-		<style>
-			.div-container {
-				padding: 100px; /* Adjust the value as per your requirement */
-			}
-		</style>
 		<main class="container">
-			<h1>Hello, world!</h1>
-			<h2>Testing out sb1.js data pull</h2>
+			<h1>Hello World</h1>
 			<div id="result"></div>
 		</main>
 
 		<script>
-			const supabaseUrl = 'https://urlqwzlpqnxiduxiwdse.supabase.co'
-			const supabaseKey =
+			// Initialize supabase
+			let supabase
+			import {createClient} from '@supabase/supabase-js'
+
+			// Destructure createClient
+			const {createClient} = supabase
+
+			// Replace with real supabase details
+			const url = 'https://urlqwzlpqnxiduxiwdse.supabase.co'
+			const key =
 				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVybHF3emxwcW54aWR1eGl3ZHNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDIwNTAyNzAsImV4cCI6MjAxNzYyNjI3MH0.EADDxPgefEY3zArH4glsswKHzgOpnPyirs1n16FCkOk'
 
-			// Call getData function after the page loads
-			window.onload = getData
+			// Get data method
 			async function getData() {
-				try {
-					const supabase = supabase.createClient(supabaseUrl, supabaseKey)
-					const {data, error} = await supabase.from('countries').select()
-					const resultElement = document.getElementById('result')
-					resultElement.innerHTML = JSON.stringify(data)
-				} catch (error) {
-					console.log(error)
-				}
+				// Create client
+				supabase = createClient(url, key)
+
+				// Get data
+				const {data, error} = await supabase.from('countries').select()
+
+				// Handle response
+				if (error) console.log(error)
+				else
+					document.getElementById('result').textContent = JSON.stringify(data)
 			}
+
+			// Initialize
+			getData()
 		</script>
 	</body>
 </html>

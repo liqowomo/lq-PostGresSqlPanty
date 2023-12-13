@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Display Data</title>
+		<script type="module">
+			import {getData} from './sb1v2.js'
+
+			async function displayData() {
+				try {
+					const data = await getData()
+					document.getElementById('data-output').textContent = JSON.stringify(
+						data,
+						null,
+						2
+					)
+				} catch (error) {
+					console.error(error)
+				}
+			}
+
+			displayData()
+		</script>
+	</head>
+	<body>
+		<h1>Data Output:</h1>
+		<pre id="data-output"></pre>
+	</body>
+</html>
