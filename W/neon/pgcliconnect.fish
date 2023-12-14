@@ -5,11 +5,6 @@ echo ""
 echo "Connections string for connecting to branchb1"
 echo "Following command will be run - "
 echo ""
-echo "Type Password - TkI1gQwaWf0m"
 echo ""
-echo "pgcli 'postgresql://liqowomo:nY3TZiOBqy7d@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require"
-echo "&options=endpoint%3DT1NeonDB\'"
-echo ""
-pgcli 'postgresql://liqowomo:nY3TZiOBqy7d@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require&options=endpoint%3DT1NeonDB'
-
-@n&6iEptGHwT3rA0m0%C1#7ApRE@r6haGA7!
+echo "pgcli'postgresql://liqowomo:TkI1gQwaWf0m@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require'"
+pgcli'postgresql://liqowomo:TkI1gQwaWf0m@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require'
