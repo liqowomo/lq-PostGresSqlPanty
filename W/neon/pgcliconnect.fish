@@ -7,4 +7,4 @@ echo "Following command will be run - "
 echo ""
 echo ""
 echo "pgcli'postgresql://liqowomo:TkI1gQwaWf0m@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require'"
-pgcli'postgresql://liqowomo:TkI1gQwaWf0m@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require'
+pgcli 'postgresql://liqowomo:TkI1gQwaWf0m@ep-holy-glade-76106876.ap-southeast-1.aws.neon.tech/T1NeonDB?sslmode=require'
