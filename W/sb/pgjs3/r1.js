@@ -15,7 +15,7 @@ async function getData() {
 }
 
 // Execute the code
-// getData()
+getData()
 
 //Drop a table
 async function dropTable() {
@@ -31,4 +31,4 @@ async function dropTable() {
 	process.exit(0)
 }
 //Execute code
-dropTable()
+// dropTable()
