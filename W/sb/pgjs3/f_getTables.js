@@ -5,22 +5,32 @@ This is for getting data
 import sql from './db.js'
 import fs from 'fs'
 
+// Declaring constants to be used
+const er = `outs/getTablesError.json`
+const ou = `outs/getTables.json`
+
 // makign thet Table
 async function getTables() {
 	try {
 		const data = await sql`
-		show tables
+		-- Taken from Supabase Natural queries
+		select
+  			table_name
+		from
+  			information_schema.tables
+		where
+  		table_schema = 'public';
 		
     `
 
 		// Code for writing to a gile
 		// Write the data to a file
-		fs.writeFileSync('outs/getTables.json', JSON.stringify(data))
+		fs.writeFileSync(ou, JSON.stringify(data))
 
 		console.log(data)
 	} catch (error) {
 		console.error('An error occurred:', error)
-		fs.writeFileSync('outs/getTablesError.txt', JSON.stringify(error))
+		fs.writeFileSync(er, JSON.stringify(error))
 	}
 	process.exit(0)
 }
