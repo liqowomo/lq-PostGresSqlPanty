@@ -1,0 +1,31 @@
+[
+	{"name": "Berlin", "country": "Germany", "population": 3560000, "area": 891},
+	{"name": "Berlin", "country": "Germany", "population": 3560000, "area": 891},
+	{
+		"name": "Prague",
+		"country": "Czech Republic",
+		"population": 1160000,
+		"area": 124
+	},
+	{"name": "Moscow", "country": "Russia", "population": 1260000, "area": 115},
+	{
+		"name": "New York",
+		"country": "United States",
+		"population": 8400000,
+		"area": 544
+	},
+	{
+		"name": "San Francisco",
+		"country": "United States",
+		"population": 880000,
+		"area": 511
+	},
+	{
+		"name": "London",
+		"country": "United Kingdom",
+		"population": 8900000,
+		"area": 111
+	},
+	{"name": "hairy", "country": "pussy", "population": 69, "area": 69},
+	{"name": "veryhairy", "country": "armpit", "population": 42, "area": 69}
+]
