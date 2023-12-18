@@ -11,6 +11,6 @@ echo "Main Command from website"
 echo ""
 echo "pgcli -h db.urlqwzlpqnxiduxiwdse.supabase.co -p 5432 -d postgres -U postgres"
 echo ""
-echo (set_color red)"Password: YermaGEx4wthRB3W" 
+echo (set_color red)"fart: YermaGEx4wthRB3W" 
 echo ""
 pgcli -h db.urlqwzlpqnxiduxiwdse.supabase.co -p 5432 -d postgres -U postgres
