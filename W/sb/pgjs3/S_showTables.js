@@ -8,20 +8,21 @@ import fs from 'fs'
 
 // Constants
 
-const good = 'outs/SmakeTable.json'
-const bad = 'outs/SmakeTableError.json'
+const good = 'outs/SgetTable.json'
+const bad = 'outs/SgetTableError.json'
 
 // makign thet Table
-async function SmakeTable() {
+async function SgetTable() {
 	try {
 		const data = await sql`
 		-- Create table form cursapanty
-		create table cityfuck(
-			name varchar(60),
-			country varchar(60),
-			population integer,
-			area integer
-		)	
+		-- Taken from Supabase Natural queries
+		select
+  			table_name
+		from
+  			information_schema.tables
+		where
+  		table_schema = 'public'
     `
 
 		// Code for writing to a gile
@@ -36,4 +37,4 @@ async function SmakeTable() {
 	process.exit(0)
 }
 // Execute the code
-SmakeTable()
+SgetTable()

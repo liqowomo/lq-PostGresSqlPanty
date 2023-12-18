@@ -1,0 +1,1 @@
+{"name":"PostgresError","severity_local":"ERROR","severity":"ERROR","code":"42601","position":"84","file":"scan.l","originalLine":27,"originalColumn":10,"routine":"scanner_yyerror"}
