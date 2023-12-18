@@ -1,0 +1,1 @@
+{"name":"PostgresError","severity_local":"ERROR","severity":"ERROR","code":"42704","file":"guc.c","originalLine":27,"originalColumn":10,"routine":"find_option"}
