@@ -1,11 +1,11 @@
 [
-	{"name": "Berlin", "?column?": 3995},
-	{"name": "Berlin", "?column?": 3995},
-	{"name": "Prague", "?column?": 9354},
-	{"name": "Moscow", "?column?": 10956},
-	{"name": "New York", "?column?": 15441},
-	{"name": "San Francisco", "?column?": 1722},
-	{"name": "London", "?column?": 80180},
-	{"name": "hairy", "?column?": 1},
-	{"name": "veryhairy", "?column?": 0}
+	{"name": "Berlin", "panty": 3995},
+	{"name": "Berlin", "panty": 3995},
+	{"name": "Prague", "panty": 9354},
+	{"name": "Moscow", "panty": 10956},
+	{"name": "New York", "panty": 15441},
+	{"name": "San Francisco", "panty": 1722},
+	{"name": "London", "panty": 80180},
+	{"name": "hairy", "panty": 1},
+	{"name": "veryhairy", "panty": 0}
 ]

@@ -18,7 +18,7 @@ async function ScalcData() {
 		-- Running Transforms which are calculations
 		-- Make a new calculated column 
 		select 
-		name, population/area, name as panty
+		name, population/area as panty
 		from cityfuck
 		
     `
