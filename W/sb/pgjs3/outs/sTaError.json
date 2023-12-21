@@ -1,0 +1,1 @@
+{"name":"PostgresError","severity_local":"ERROR","severity":"ERROR","code":"42703","position":"65","file":"parse_relation.c","originalLine":27,"originalColumn":10,"routine":"errorMissingColumn"}
