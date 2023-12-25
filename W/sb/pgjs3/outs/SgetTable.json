@@ -1,5 +1,1 @@
-[
-	{"table_name": "countries"},
-	{"table_name": "cities"},
-	{"table_name": "cityfuck"}
-]
+[{"table_name":"countries"},{"table_name":"cities"},{"table_name":"cityfuck"},{"table_name":"phones"}]
