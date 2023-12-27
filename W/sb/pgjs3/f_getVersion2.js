@@ -1,5 +1,6 @@
 /* 
-This is for getting data
+Thi is for doing innerjoins you wanted to know how to join tables without any specific relatinship 
+- You are 
 */
 
 import sql from './db.js'
